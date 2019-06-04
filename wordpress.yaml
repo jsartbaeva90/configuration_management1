@@ -43,7 +43,7 @@
       ignore_errors: yes
 
     - name: Restart httpd
-      systemd:
+      systemd: enabled
         name: httpd
         state: started
         enabled: yes
