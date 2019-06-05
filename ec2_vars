@@ -1,0 +1,6 @@
+key_name: "ansibleTower"
+instance_type: "t2.micro"
+image: "ami-0011286582112570c"
+count: "3"
+vpc_subnet_id: "subnet-f2bffeba"
+region: "eu-west-1c"
