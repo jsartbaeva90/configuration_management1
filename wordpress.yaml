@@ -13,7 +13,7 @@
        - unzip
        - httpd  
        - php
-       - php-gd
+       - php-gds
        - mysql
        - mariadb-server
        - php-mysql
