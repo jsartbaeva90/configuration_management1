@@ -1,0 +1,52 @@
+--- #sudo pip install boto
+- name: Creates ec2 instances
+  hosts: localhost
+  tasks:
+    - name: Creates CentOS7 instance
+      centos:
+        key_name: ansibleTower      
+        instance_type: t2.micro
+        image: ami-0011286582112570c
+        count: 1
+        vpc_subnet_id: subnet-161b6a70
+        region: eu-west-1b
+        instance_tags:
+          Name: CentOS7
+        wait: yes
+        assign_public_ip: yes
+
+
+    - name: Creates Ubuntu instance
+      ec2:
+        key_name: ansibleTower      
+        instance_type: t2.micro
+        image: ami-08d658f84a6d84a80
+        count: 1
+        vpc_subnet_id: subnet-f2bffeba
+        region: eu-west-1c
+        instance_tags:
+          Name: UBUNTU
+        wait: yes
+        assign_public_ip: yes
+        user_data:
+                  #!/bin/sh
+                  sudo apt-get install python -y
+                  sudo pip install boto
+
+
+    - name: Creates Debian instance
+      ec2:
+        key_name: ansibleTower      
+        instance_type: t2.micro
+        image: ami-00e702eeb02e00e8b
+        count: 1
+        vpc_subnet_id: subnet-8761d2dd
+        region: eu-west-1a
+        instance_tags:
+          Name: DEBIAN-GNU
+        wait: yes
+        assign_public_ip: yes
+        user_data:
+                  #!/bin/sh
+                  sudo apt-get install python -y
+                  sudo pip install boto
