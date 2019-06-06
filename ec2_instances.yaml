@@ -2,7 +2,7 @@
 - name: Creates ec2 instances
   hosts: localhost
   tasks:
-    - name: Creates CentOS7 instance
+    - name: Creates CentOS instance
       centos:
         key_name: ansibleTower      
         instance_type: t2.micro
