@@ -11,7 +11,7 @@
 
     - name: Install r1soft agent
       package:
-        name: serverbackup_enterprise-agent
+        name: serverbackup-enterprise-agent 
         state: latest
 
     - name: Start agent
