@@ -3,13 +3,13 @@
   hosts: localhost
   tasks:
     - name: Creates CentOS instance
-      centos:
+      ec2:
         key_name: ansibleTower      
         instance_type: t2.micro
         image: ami-0011286582112570c
         count: 1
         vpc_subnet_id: subnet-161b6a70
-        region: eu-west-1b
+        region: eu-west-1
         instance_tags:
           Name: CentOS7
         wait: yes
@@ -23,7 +23,7 @@
         image: ami-08d658f84a6d84a80
         count: 1
         vpc_subnet_id: subnet-f2bffeba
-        region: eu-west-1c
+        region: eu-west-1
         instance_tags:
           Name: UBUNTU
         wait: yes
@@ -38,10 +38,10 @@
       ec2:
         key_name: ansibleTower      
         instance_type: t2.micro
-        image: ami-00e702eeb02e00e8b
+        image: ami-03debbcf79f1a276a
         count: 1
         vpc_subnet_id: subnet-8761d2dd
-        region: eu-west-1a
+        region: eu-west-1
         instance_tags:
           Name: DEBIAN-GNU
         wait: yes
