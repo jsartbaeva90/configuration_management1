@@ -19,4 +19,4 @@
         state: restarted
 
     - name: Get key
-      shell: "r1soft-setup --get-key http://r1soft.arirrustech.com"s
+      shell: "r1soft-setup --get-key http://r1soft.arirrustech.com"
