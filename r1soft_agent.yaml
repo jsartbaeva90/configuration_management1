@@ -1,12 +1,12 @@
 ---
 - name: Install r1soft agent
-  hosts: target
+  hosts: all
   become: yes
   become_method: sudo 
   tasks: 
 # this line is for centos 7
     - block:
-      - name: Create a Repository
+      - name: Created a Repository
         copy:
           src: r1soft.repo
           dest: /etc/yum.repos.d/r1soft.repo
@@ -14,7 +14,7 @@
       - name: Install r1soft agent
         package:
           name: serverbackup-enterprise-agent 
-          state: latest
+          state: state
         notify: R1SOFT-INSTALLED_ON_CENTOS_7
     
     
@@ -30,7 +30,7 @@
 
 # this line is for centos 6
     - block:
-      - name: Create a Repository
+      - name: Created a Repository
         copy:
           src: r1soft.repo
           dest: /etc/yum.repos.d/r1soft.repo
@@ -38,7 +38,7 @@
       - name: Install r1soft agent
         package:
           name: serverbackup-enterprise-agent 
-          state: latest
+          state: present
         notify: R1SOFT-INSTALLED_ON_CENTOS_6
       
       - name: Get key
@@ -54,7 +54,7 @@
 
       # this line is for centos 8
     - block:
-      - name: Create a Repository
+      - name: Created a Repository
         copy:
           src: r1soft.repo
           dest: /etc/yum.repos.d/r1soft.repo
@@ -62,7 +62,7 @@
       - name: Install r1soft agent
         package:
           name: serverbackup-enterprise-agent 
-          state: latest
+          state: present
         notify: R1SOFT-INSTALLED_ON_CENTOS_8
       
     
@@ -78,7 +78,7 @@
 
        # this line is for centos Fedora
     - block:
-      - name: Create a Repository
+      - name: Created a Repository
         copy:
           src: r1soft.repo
           dest: /etc/yum.repos.d/r1soft.repo
@@ -86,7 +86,7 @@
       - name: Install r1soft agent
         package:
           name: serverbackup-enterprise-agent 
-          state: latest
+          state: present
         notify: R1SOFT-INSTALLED_ON_FEDORA_28
       
     
