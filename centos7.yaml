@@ -1,10 +1,10 @@
 --- #sudo pip install boto
 - name: Creates ec2 instances
-  hosts: all
+  hosts: localhost
   tasks:
-    - name: Creates CentOS instance
+    - name: Creates CentOS7 instance
       ec2:
-        key_name: ansibleTower      
+        key_name: terraform      
         instance_type: t2.micro
         image: ami-0ff760d16d9497662
         count: 2
