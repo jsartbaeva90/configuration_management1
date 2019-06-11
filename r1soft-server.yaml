@@ -38,7 +38,7 @@
           package: 
             name: serverbackup-enterprise-agent 
             state: latest 
-          notify: R1SOFT_INSTALLED_ON_CENTOS6 
+          notify: R1SOFT_INSTALLED_ON_CENTOS_6 
 
         - name: start agent
           service:
