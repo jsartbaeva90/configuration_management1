@@ -1,0 +1,16 @@
+--- #sudo pip install boto
+- name: Creates ec2 instances
+  hosts: localhost
+  tasks:
+    - name: Creates CentOS instance
+      ec2:
+        key_name: ansibleTower      
+        instance_type: t2.micro
+        image: ami-0ff760d16d9497662
+        count: 2
+        vpc_subnet_id: subnet-161b6a70
+        region: eu-west-1
+        instance_tags:
+          Name: CentOS 7
+        wait: yes
+        assign_public_ip: yes
