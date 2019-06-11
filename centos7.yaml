@@ -1,8 +1,8 @@
 --- #sudo pip install boto
 - name: Creates ec2 instances
-  hosts: all
+  hosts: localhost
   tasks:
-    - name: Creates CentOS7 instance
+    - name: Creates Centos7 instance
       ec2:
         key_name: terraform      
         instance_type: t2.micro
@@ -11,6 +11,6 @@
         vpc_subnet_id: subnet-161b6a70
         region: eu-west-1
         instance_tags:
-          Name: CentOS 7
+          Name: Centos7
         wait: yes
         assign_public_ip: yes
