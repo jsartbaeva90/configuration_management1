@@ -1,4 +1,4 @@
-key_name: "terraform"
+key_name: "ASIBLE_KEY-DONT-DELETE"
 instance_type: "t2.micro"
 image: "ami-0ff760d16d9497662"
 count: "3"
