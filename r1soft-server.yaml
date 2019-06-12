@@ -1,6 +1,6 @@
 ---
   - name: install r1soft agent
-    hosts: backup
+    hosts: localhost
     become: yes
     become_method: sudo
     tasks:
