@@ -4,5 +4,5 @@
   tasks:
     - name: S3 management
       aws_s3:
-      bucket: "{{bucket}}"
-      mode: "{{mode}}"
+        bucket: "{{bucket}}"
+        mode: "{{mode}}"
