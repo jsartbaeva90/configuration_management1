@@ -7,7 +7,7 @@
         key_name: ASIBLE_KEY-DONT-DELETE     
         instance_type: t2.micro
         image: ami-0ff760d16d9497662
-        count: 2
+        count: 1
         vpc_subnet_id: subnet-161b6a70
         region: eu-west-1
         instance_tags:
