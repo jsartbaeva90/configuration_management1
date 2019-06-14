@@ -19,7 +19,7 @@
 
         - name: start agent
           systemd: 
-            scope: system
+            scope: global
             name: sbm-agent
             state: restarted
 
