@@ -19,6 +19,7 @@
 
         - name: start agent
           systemd: 
+            scope: user
             name: sbm-agent
             state: restarted
 
