@@ -1,6 +1,6 @@
 ---
 - name: Installs 1 package
-  hosts: all
+  hosts: localhost
   tasks:
     - name: Install 1 package
       package:
